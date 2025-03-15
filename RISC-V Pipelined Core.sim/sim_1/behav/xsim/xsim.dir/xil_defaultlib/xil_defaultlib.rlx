@@ -1,0 +1,11 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+E:/Electronics/Vivado/RISC-V Pipelined Core/RISC-V Pipelined Core.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+E:/Electronics/Vivado/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sim_1/new/fetch_cycle_tb.v,1742049172,verilog,,,,fetch_cycle_tb,,,,,,,,
+E:/Electronics/Vivado/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/Fetch_Cycle.v,1742046970,verilog,,E:/Electronics/Vivado/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/Instruction_Memory.v,,Fetch_Cycle,,,,,,,,
+E:/Electronics/Vivado/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/Instruction_Memory.v,1742048383,verilog,,E:/Electronics/Vivado/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/PC_adder.v,,Instr_Mem,,,,,,,,
+E:/Electronics/Vivado/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/PC_adder.v,1741532309,verilog,,E:/Electronics/Vivado/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/Program_Counter.v,,PC_adder,,,,,,,,
+E:/Electronics/Vivado/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/Program_Counter.v,1741442054,verilog,,E:/Electronics/Vivado/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/mux_2X1.v,,PC,,,,,,,,
+E:/Electronics/Vivado/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/mux_2X1.v,1741604196,verilog,,E:/Electronics/Vivado/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sim_1/new/fetch_cycle_tb.v,,mux_2X1,,,,,,,,
