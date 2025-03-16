@@ -1,9 +1,8 @@
 module Control_Unit(
     input [6:0]opcode, funct7,
     input [2:0] funct3,
-    input zero,
-      
-    output PCsrc, RegWrite, ALUSrc, MemWrite, ResultSrc,
+       
+    output RegWrite, ALUSrc, MemWrite, ResultSrc, Branch,
     output [1:0] ImmSrc,
     output [2:0] ALUControl
 );
@@ -11,8 +10,7 @@ module Control_Unit(
 wire [1:0] ALU_Op;
 
 Main_Decoder Main_Decoder_1(.opcode(opcode),
-                            .zero(zero),
-                            .PCsrc(PCsrc),
+                            .Branch(Branch),
                             .RegWrite(RegWrite),
                             .ALUSrc(ALUSrc),
                             .MemWrite(MemWrite),

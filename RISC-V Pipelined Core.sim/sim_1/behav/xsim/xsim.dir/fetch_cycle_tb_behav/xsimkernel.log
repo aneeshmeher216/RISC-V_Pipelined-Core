@@ -2,3 +2,6 @@ Running: xsim.dir/fetch_cycle_tb_behav/xsimk.exe -simmode gui -wdb fetch_cycle_t
 Design successfully loaded
 Design Loading Memory Usage: 6976 KB (Peak: 6976 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 7604 KB (Peak: 7604 KB)
+Simulation CPU Usage: 0 ms
