@@ -21,8 +21,7 @@ always @(posedge clk) begin
 end
 
 initial begin
-    reg_mem[5] = 32'h00000006;
-    reg_mem[6] = 32'h0000000A;  //32'd10
+    reg_mem[0] = 32'h00000000;
 end
 
 endmodule

@@ -1,5 +1,3 @@
-//`timescale 1ns / 1ps
-
 module PC(
     input clk,rst,
     input [31:0] PC_Next,
@@ -7,7 +5,7 @@ module PC(
     output reg [31:0] PC
 );
 
-always @(posedge clk) begin
+always @(posedge clk or negedge rst) begin
     if(!rst) begin          //active low reset.
         PC <= 32'd0;
     end

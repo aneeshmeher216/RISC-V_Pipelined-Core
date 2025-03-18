@@ -8,10 +8,11 @@ module Fetch_Cycle(
     output [31:0] PCD, PCPlus4D    
 );
 
-wire [31:0] PCF, PC_F, PCPlus4F;    //PC_F represents PCF' in Block diagram 
+wire [31:0] PCF, PC_F, PCPlus4F ;    //PC_F represents PCF' in Block diagram 
 wire [31:0] InstrF;
 //breaking the delay register b/w 2 stages to 3 different registers
 reg [31:0] InstrF_reg, PCF_reg, PCPlus4F_reg; 
+
 
 mux_2X1 PC_Mux (.a(PCPlus4F),
                 .b(PCTargetE),
@@ -45,8 +46,8 @@ always @(posedge clk or negedge rst) begin  // active low reset
     end
 end    
   
-assign InstrD   = (!rst) ? 32'd0 : InstrF_reg; //active low reset
-assign PCD      = (!rst) ? 32'd0 : PCF_reg;
-assign PCPlus4D = (!rst) ? 32'd0 : PCPlus4F_reg;
+assign InstrD   = InstrF_reg; //active low reset
+assign PCD      = PCF_reg;
+assign PCPlus4D = PCPlus4F_reg;
 
 endmodule

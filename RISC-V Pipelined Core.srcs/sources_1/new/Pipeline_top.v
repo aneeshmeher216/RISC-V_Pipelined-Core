@@ -13,7 +13,7 @@ wire [2:0] ALUControlE;
 
 
 Fetch_Cycle fetch(.clk(clk),
-                  .rst(clk),
+                  .rst(rst),
                   .PCSrcE(PCSrcE),
                   .PCTargetE(PCtargetE),
                   .InstrD(InstrD),

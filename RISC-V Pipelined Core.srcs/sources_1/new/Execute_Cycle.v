@@ -40,7 +40,7 @@ ALU ALU(.A(RD1E),
 
 PC_adder PC_adder(.a(PCE),
                   .b(ImmExtE),
-                  .c(PCPlus4E)); 
+                  .c(PCTargetE)); 
 
 
 always @(posedge clk or negedge rst) begin

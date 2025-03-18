@@ -31,7 +31,7 @@ Control_Unit Control_Unit(  .opcode(InstrD[6:0]),
                             .ALUSrc(ALUSrcD),
                             .MemWrite(MemWriteD),
                             .ResultSrc(ResultSrcD),
-                            .ImmSrc(ImmSrcD[0]),
+                            .ImmSrc(ImmSrcD),
                             .ALUControl(ALUControlD));
 
 Register_File reg_file( .clk(clk),
@@ -45,7 +45,7 @@ Register_File reg_file( .clk(clk),
                         .RD2(RD2_D));
 
 Sign_Extend imm_extend(.Instr(InstrD[31:0]),
-                       .ImmSrc(ImmSrcD[0]),
+                       .ImmSrc(ImmSrcD),
                        .Imm_Ext(ImmExtD));
      
 always @(posedge clk or negedge rst) begin

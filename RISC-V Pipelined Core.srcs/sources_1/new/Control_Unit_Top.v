@@ -1,5 +1,5 @@
 module Control_Unit(
-    input [6:0]opcode, funct7,
+    input [6:0] opcode, funct7,
     input [2:0] funct3,
        
     output RegWrite, ALUSrc, MemWrite, ResultSrc, Branch,
@@ -18,8 +18,8 @@ Main_Decoder Main_Decoder_1(.opcode(opcode),
                             .ImmSrc(ImmSrc),
                             .ALUOp(ALU_Op));
 
-ALU_Decoder ALU_Decoder_1(.opcode_5(opcode[5]),
-                            .funct7_5(funct7[5]),                                      
+ALU_Decoder ALU_Decoder_1(.opcode(opcode),
+                            .funct7(funct7),                                      
                             .funct3(funct3),
                             .ALUOp(ALU_Op),
                             .ALUControl(ALUControl));

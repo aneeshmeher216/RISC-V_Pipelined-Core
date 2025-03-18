@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="157160963fs"></ZoomStartTime>
-      <ZoomEndTime time="970849176fs"></ZoomEndTime>
-      <Cursor1Time time="316856000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="145200001fs"></ZoomEndTime>
+      <Cursor1Time time="105000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="183"></NameColumnWidth>
-      <ValueColumnWidth column_width="95"></ValueColumnWidth>
+      <NameColumnWidth column_width="188"></NameColumnWidth>
+      <ValueColumnWidth column_width="74"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="5" />
+   <WVObjectSize size="7" />
    <wvobject fp_name="/Pipeline_top_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -48,14 +48,124 @@
          <obj_property name="ElementShortName">InstrD[31:0]</obj_property>
          <obj_property name="ObjectShortName">InstrD[31:0]</obj_property>
       </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/fetch/PCPlus4D" type="array">
+         <obj_property name="ElementShortName">PCPlus4D[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PCPlus4D[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/decode/ImmExtD" type="array">
+         <obj_property name="ElementShortName">ImmExtD[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ImmExtD[31:0]</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject fp_name="group139" type="group">
       <obj_property name="label">Decode</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/Pipeline_top_tb/dut/decode/PCE" type="array">
+         <obj_property name="ElementShortName">PCE[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PCE[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/decode/PCPlus4E" type="array">
+         <obj_property name="ElementShortName">PCPlus4E[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PCPlus4E[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/decode/RD_E" type="array">
+         <obj_property name="ElementShortName">RD_E[4:0]</obj_property>
+         <obj_property name="ObjectShortName">RD_E[4:0]</obj_property>
+      </wvobject>
       <wvobject fp_name="/Pipeline_top_tb/dut/decode/ALUControlE" type="array">
          <obj_property name="ElementShortName">ALUControlE[2:0]</obj_property>
          <obj_property name="ObjectShortName">ALUControlE[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/decode/ALUSrcE" type="logic">
+         <obj_property name="ElementShortName">ALUSrcE</obj_property>
+         <obj_property name="ObjectShortName">ALUSrcE</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/decode/BranchE" type="logic">
+         <obj_property name="ElementShortName">BranchE</obj_property>
+         <obj_property name="ObjectShortName">BranchE</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/decode/RegWriteE" type="logic">
+         <obj_property name="ElementShortName">RegWriteE</obj_property>
+         <obj_property name="ObjectShortName">RegWriteE</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/decode/MemWriteE" type="logic">
+         <obj_property name="ElementShortName">MemWriteE</obj_property>
+         <obj_property name="ObjectShortName">MemWriteE</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/decode/ResultSrcE" type="logic">
+         <obj_property name="ElementShortName">ResultSrcE</obj_property>
+         <obj_property name="ObjectShortName">ResultSrcE</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/decode/RD1E" type="array">
+         <obj_property name="ElementShortName">RD1E[31:0]</obj_property>
+         <obj_property name="ObjectShortName">RD1E[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/decode/RD2E" type="array">
+         <obj_property name="ElementShortName">RD2E[31:0]</obj_property>
+         <obj_property name="ObjectShortName">RD2E[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/decode/ImmExtE" type="array">
+         <obj_property name="ElementShortName">ImmExtE[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ImmExtE[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/execute/ALUResultE" type="array">
+         <obj_property name="ElementShortName">ALUResultE[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ALUResultE[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group28" type="group">
+      <obj_property name="label">Execute</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/Pipeline_top_tb/dut/execute/RegWriteM" type="logic">
+         <obj_property name="ElementShortName">RegWriteM</obj_property>
+         <obj_property name="ObjectShortName">RegWriteM</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/execute/MemWriteM" type="logic">
+         <obj_property name="ElementShortName">MemWriteM</obj_property>
+         <obj_property name="ObjectShortName">MemWriteM</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/execute/ResultSrcM" type="logic">
+         <obj_property name="ElementShortName">ResultSrcM</obj_property>
+         <obj_property name="ObjectShortName">ResultSrcM</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/execute/ALUResultM" type="array">
+         <obj_property name="ElementShortName">ALUResultM[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ALUResultM[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/execute/WriteDataM" type="array">
+         <obj_property name="ElementShortName">WriteDataM[31:0]</obj_property>
+         <obj_property name="ObjectShortName">WriteDataM[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/execute/PCPlus4M" type="array">
+         <obj_property name="ElementShortName">PCPlus4M[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PCPlus4M[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/execute/RD_M" type="array">
+         <obj_property name="ElementShortName">RD_M[4:0]</obj_property>
+         <obj_property name="ObjectShortName">RD_M[4:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group38" type="group">
+      <obj_property name="label">Memory</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/Pipeline_top_tb/dut/memory/ResultSrcW" type="logic">
+         <obj_property name="ElementShortName">ResultSrcW</obj_property>
+         <obj_property name="ObjectShortName">ResultSrcW</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/memory/ReadDataW" type="array">
+         <obj_property name="ElementShortName">ReadDataW[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ReadDataW[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/memory/ALUResultW" type="array">
+         <obj_property name="ElementShortName">ALUResultW[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ALUResultW[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/memory/PCPlus4W" type="array">
+         <obj_property name="ElementShortName">PCPlus4W[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PCPlus4W[31:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group141" type="group">

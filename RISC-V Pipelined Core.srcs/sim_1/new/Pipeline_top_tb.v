@@ -5,12 +5,15 @@ module Pipeline_top_tb;
 
 Pipeline_top dut(.clk(clk), .rst(rst));
 
-always #50 clk = ~clk;
+always begin
+     clk = ~clk;
+    #5 ;
+end
 
 initial begin
          rst <= 1'b0;
-   #200  rst <= 1'b1;
-   #1000 $finish;
+   #5  rst <= 1'b1;
+   #100 $finish;
 end
     
 endmodule

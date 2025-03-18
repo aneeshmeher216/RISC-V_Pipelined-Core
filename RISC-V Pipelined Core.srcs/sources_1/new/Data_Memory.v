@@ -18,6 +18,7 @@ always @(posedge clk) begin
 end
 
 initial begin
-    data_mem[28] = 32'h00000020;
+    data_mem[0] = 32'h00000000;
 end
+
 endmodule
