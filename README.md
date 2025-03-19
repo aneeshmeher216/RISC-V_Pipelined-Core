@@ -1,3 +1,6 @@
+Complete Pipeline Design including a Hazard unit
+![image](https://github.com/user-attachments/assets/a12a7673-2452-4062-b729-1528d35f144e)
+
 Sample Instructions used for verification:
 ![Instruction example](https://github.com/user-attachments/assets/542e9900-86b8-49cf-98a6-2b20f6066d20)
 
