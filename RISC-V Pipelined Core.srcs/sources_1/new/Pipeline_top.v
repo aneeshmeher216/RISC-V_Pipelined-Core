@@ -10,7 +10,8 @@ wire [31:0] ALUResultM, WriteDataM, PCPlus4M;
 wire [31:0] ReadDataW, ALUResultW, PCPlus4W;
 wire [4:0] RDW, RD_E, RD_M;
 wire [2:0] ALUControlE;
-
+wire [4:0] Rs1_E, Rs2_E;
+wire [1:0] ForwardAE, ForwardBE;
 
 Fetch_Cycle fetch(.clk(clk),
                   .rst(rst),
@@ -40,7 +41,9 @@ Decode_Cycle decode(.clk(clk),
                     .ImmExtE(ImmExtE),
                     .RD_E(RD_E),
                     .PCE(PCE),
-                    .PCPlus4E(PCPlus4E));
+                    .PCPlus4E(PCPlus4E),
+                    .Rs1_E(Rs1_E),
+                    .Rs2_E(Rs2_E));
                     
                     
 Execute_Cycle execute(  .clk(clk), 
@@ -65,7 +68,10 @@ Execute_Cycle execute(  .clk(clk),
                         .ALUResultM(ALUResultM), 
                         .WriteDataM(WriteDataM), 
                         .PCPlus4M(PCPlus4M),
-                        .RD_M(RD_M));
+                        .RD_M(RD_M),
+                        .ResultW(ResultW),
+                        .ForwardAE(ForwardAE),
+                        .ForwardBE(ForwardBE));
     
 
 Memory_Cycle memory(.clk(clk), 
@@ -93,5 +99,14 @@ WriteBack_Cycle writeback(.clk(clk),
                         .PCPlus4W(PCPlus4W), 
                         .ResultW(ResultW));
                         
-                
+
+Hazard_Unit Forwarding_Block(.rst(rst), 
+                             .RegWriteM(RegWriteM), 
+                             .RegWriteW(RegWriteW),
+                             .Rs1E(Rs1_E), 
+                             .Rs2E(Rs2_E), 
+                             .RdM(RD_M), 
+                             .RdW(RDW),
+                             .ForwardAE(ForwardAE), 
+                             .ForwardBE(ForwardBE));          
 endmodule

@@ -7,7 +7,7 @@ module Decode_Cycle(
     output [2:0] ALUControlE,
     output [31:0] RD1E, RD2E,
     output [31:0] ImmExtE,
-    output [4:0] RD_E,
+    output [4:0] RD_E, Rs1_E, Rs2_E,
     output [31:0] PCE,PCPlus4E
 );
 
@@ -20,7 +20,7 @@ wire [31:0] RD1_D, RD2_D, ImmExtD;
 reg BranchD_r, RegWriteD_r, MemWriteD_r, ALUSrcD_r, ResultSrcD_r;
 reg [2:0] ALUControlD_r;
 reg [31:0] RD1_D_r, RD2_D_r, ImmExtD_r;
-reg [4:0] RD_D_r;
+reg [4:0] RD_D_r, Rs1_D_r, Rs2_D_r;
 reg [31:0] PCD_r, PCPlus4D_r;
 
 Control_Unit Control_Unit(  .opcode(InstrD[6:0]),
@@ -62,6 +62,9 @@ always @(posedge clk or negedge rst) begin
         RD_D_r <= 5'd0;
         PCD_r <= 32'd0;
         PCPlus4D_r <= 32'd0;
+        Rs1_D_r <= 5'd0;
+        Rs2_D_r <= 5'd0;
+        
     end
     else begin
         BranchD_r <= BranchD;
@@ -76,6 +79,9 @@ always @(posedge clk or negedge rst) begin
         RD_D_r <= InstrD[11:7];
         PCD_r <= PCD;
         PCPlus4D_r <= PCPlus4D;
+        Rs1_D_r <= InstrD[19:15];
+        Rs2_D_r <= InstrD[24:20];
+        
     end
 end     
 
@@ -91,5 +97,8 @@ assign ImmExtE = ImmExtD_r;
 assign RD_E = RD_D_r;
 assign PCE = PCD_r;
 assign PCPlus4E = PCPlus4D_r;
+assign Rs1_E = Rs1_D_r;
+assign Rs2_E = Rs2_D_r;
+
 
 endmodule
