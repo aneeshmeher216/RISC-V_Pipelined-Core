@@ -4,7 +4,8 @@ Start at rising edge → Propagate through every stage (fetch, decode, execute, 
 That’s why single-cycle designs are inefficient:
 You must set the clock period to the worst-case instruction.
 
-**Pipelining fixes this:**
+** Pipelining fixes this: **
+
 By introducing intermediate pipeline registers, each stage gets its own clock cycle. So:
 * Clock period = time of the longest pipeline stage, not the whole instruction.
 * Allows much faster clock rates and higher throughput.
