@@ -1,4 +1,14 @@
-Complete Pipeline Design including a Hazard unit
+The cycle time of a **single-cycle processor** must be long enough to:
+Start at rising edge → Propagate through every stage (fetch, decode, execute, memory, write-back) → Set up values for the next rising edge.
+
+That’s why single-cycle designs are inefficient:
+You must set the clock period to the worst-case instruction.
+
+**Pipelining fixes this:**
+By introducing intermediate pipeline registers, each stage gets its own clock cycle. So:
+* Clock period = time of the longest pipeline stage, not the whole instruction.
+* Allows much faster clock rates and higher throughput.
+
 ![image](https://github.com/user-attachments/assets/a12a7673-2452-4062-b729-1528d35f144e)
 
 Sample Instructions used for verification:
