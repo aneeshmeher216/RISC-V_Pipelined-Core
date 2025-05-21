@@ -13,8 +13,7 @@ By introducing intermediate pipeline registers, each stage gets its own clock cy
 ![image](https://github.com/user-attachments/assets/a12a7673-2452-4062-b729-1528d35f144e)
 ***
 **1. Instruction Fetch Stage**
-- The starting instruction address is initially stored in the PC, and it updates in 2 ways depending on the condition i.e. . If the instruction is a branch, then the new value of the PC needs to be equal to the address of the branch target. Otherwise, the address of the next instruction is equal to the default value
-(current PC + 4).
+- The starting instruction address is initially stored in the PC, and it updates in 2 ways depending on the condition i.e. . If the instruction is a branch, then the new value of the PC needs to be equal to the address of the branch target. Otherwise, the address of the next instruction is equal to the default value (current PC + 4). The reason for adding 4 is because of the size of each instruction being 4 bytes(32 bits).
  
 ***
 Sample Instructions used for verification:
