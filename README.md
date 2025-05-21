@@ -12,9 +12,25 @@ By introducing intermediate pipeline registers, each stage gets its own clock cy
 
 ![image](https://github.com/user-attachments/assets/a12a7673-2452-4062-b729-1528d35f144e)
 ***
-**1. Instruction Fetch Stage**
+**1. Fetch**
 - The starting instruction address is initially stored in the PC, and it updates in 2 ways depending on the condition i.e. . If the instruction is a branch, then the new value of the PC needs to be equal to the address of the branch target. Otherwise, the address of the next instruction is equal to the default value (current PC + 4). The reason for adding 4 is because of the size of each instruction being 4 bytes(32 bits).
- 
+- Here the condition for checking branch is if the ALU result is 0 and branch signal is generated OR Jump signal is generated.
+
+**2. Decode**
+- This unit consists of a control unit, Register file, Immediate Extend unit which together helps in decoding the instruction fetched from previous stage in the sense.
+- By decoding we mean extracting different bits or ranges of bits to obtain the location of destination register, source register 1 and 2(in case of immediate type instr. 2nd source register address is replaced by an immediate number), OPcode, funct3, funct7 to determine the exact opertion to be performed.
+- After Extracting the operand register address it is used to extract the opearnd value from that address of Register file.
+- Extend unit is used for Immediate type instruction to make the immediate number obtained from the instruction 32 bit to be able to operate along with first operand without losing the sign of the immediate field.
+
+**3. Execute**
+- Contains ALU to perform the operation as dictated by the instruction and in turn chosen by ALUControl signal
+- here also the immediate field is used for deciding the offset for branch instruction and changing the normal PC incrementing.
+
+**4. Memory**
+- The result obtained from ALU is then stored in Data memory for future access.
+
+**5. Write Back**
+- Register is faster in terms of operation than memory because of being inside CPU. So if any data is being used frequenctly, it is stored inside the register for faster access 
 ***
 Sample Instructions used for verification:
 ![Instruction example](https://github.com/user-attachments/assets/542e9900-86b8-49cf-98a6-2b20f6066d20)
