@@ -11,7 +11,12 @@ By introducing intermediate pipeline registers, each stage gets its own clock cy
 * Allows much faster clock rates and higher throughput.
 
 ![image](https://github.com/user-attachments/assets/a12a7673-2452-4062-b729-1528d35f144e)
-
+***
+**1. Instruction Fetch Stage**
+- The starting instruction address is initially stored in the PC, and it updates in 2 ways depending on the condition i.e. . If the instruction is a branch, then the new value of the PC needs to be equal to the address of the branch target. Otherwise, the address of the next instruction is equal to the default value
+(current PC + 4).
+ 
+***
 Sample Instructions used for verification:
 ![Instruction example](https://github.com/user-attachments/assets/542e9900-86b8-49cf-98a6-2b20f6066d20)
 
