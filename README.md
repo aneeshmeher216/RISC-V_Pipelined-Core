@@ -30,7 +30,8 @@ By introducing intermediate pipeline registers, each stage gets its own clock cy
 - The result obtained from ALU is then stored in Data memory for future access.
 
 **5. Write Back**
-- Register is faster in terms of operation than memory because of being inside CPU. So if any data is being used frequenctly, it is stored inside the register for faster access 
+- Register is faster in terms of operation than memory because of being inside CPU. So if any data is being used frequenctly, it is stored inside the register for faster access
+- We have three choices for writeback – ALUResult, loadResult, or the return address. The return address is equal to the PC of the call instruction plus 4.
 ***
 Sample Instructions used for verification:
 ![Instruction example](https://github.com/user-attachments/assets/542e9900-86b8-49cf-98a6-2b20f6066d20)
