@@ -116,7 +116,7 @@ Clock Period = Delay of Entire Instruction
 Pipelined:
 Clock Period = Delay of Slowest Pipeline Stage
 ```
-Thus, The pipelined processor is substantially faster than the others. However, its advantage over the single-cycle processor is nowhere near the fivefold speedup one might hope to get from a five-stage pipeline due to the CPI penalty introduced due to Data and control hazards(Structural hazard not present due to the use of separate memory for instruction and data) . Moreover, the sequencing overhead (clk-to-Q and setup times) of the registers applies to every pipeline stage, not just once to the overall datapath. 
+Thus, The pipelined processor is substantially faster than the others.  
 
 ---
 ## Example Execution
@@ -149,4 +149,4 @@ Thus, The pipelined processor is substantially faster than the others. However, 
 * Latency : 5 clock cycles due to 5 pipelined stages
 * CPI : 1.67 (10 Clock Cycles for 6 instructions for non Hazard instructions)
 * Clock period will reduce as compared to single cycle processor design and determined by the stage having largest delay.
-* Throughput : 1 instruction per cycle after 4 cycles. Throughput will increase compared to single cycle core design as clock period will reduce by upto 5 times.
+* Throughput : 1 instruction per cycle after 4 cycles. Throughput will increase compared to single cycle core design as clock period will **ideally** reduce by upto 5 times but is nowhere near the fivefold speedup one might hope to get from a five-stage pipeline because of the CPI penalty introduced due to Data and control hazards (Structural hazard not present due to the use of separate memory for instruction and data) . Also the sequencing overhead (clk-to-Q and setup times) of the registers applies to every pipeline stage, not just once to the overall datapath.
