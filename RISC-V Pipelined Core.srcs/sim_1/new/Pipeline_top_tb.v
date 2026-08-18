@@ -1,19 +1,16 @@
 `timescale 1ns / 1ps
 
 module Pipeline_top_tb;
-    reg clk = 0, rst;
+    reg clk, rst;
 
 Pipeline_top dut(.clk(clk), .rst(rst));
 
-always begin
-     clk = ~clk;
-    #5 ;
-end
-
 initial begin
-         rst <= 1'b0;
-   #5  rst <= 1'b1;
-   #100 $finish;
-end
+                rst = 1'b0; clk = 0;
+        #10      rst = 1'b1;
+        #200    $finish;
+    end
+    
+always #5 clk = ~clk;
     
 endmodule

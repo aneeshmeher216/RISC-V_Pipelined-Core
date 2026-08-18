@@ -18,7 +18,12 @@ always @(posedge clk) begin
 end
 
 initial begin
-    data_mem[0] = 32'h00000000;
+    data_mem[29] = 32'h00000020;
+    data_mem[11] = 32'hDEADBEEF;
+    data_mem[61] = 32'hFAFAFAFA;
+    
+#150 $display("mem[25]= %h",data_mem[25]);
+
 end
 
 endmodule

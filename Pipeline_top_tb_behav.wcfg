@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="105000001fs"></ZoomEndTime>
-      <Cursor1Time time="105000000fs"></Cursor1Time>
+      <ZoomStartTime time="0.017 ns"></ZoomStartTime>
+      <ZoomEndTime time="131.318 ns"></ZoomEndTime>
+      <Cursor1Time time="55.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="176"></NameColumnWidth>
-      <ValueColumnWidth column_width="79"></ValueColumnWidth>
+      <NameColumnWidth column_width="139"></NameColumnWidth>
+      <ValueColumnWidth column_width="81"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="8" />
    <wvobject fp_name="/Pipeline_top_tb/clk" type="logic">
@@ -40,9 +40,13 @@
          <obj_property name="ElementShortName">PCTargetE[31:0]</obj_property>
          <obj_property name="ObjectShortName">PCTargetE[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/Pipeline_top_tb/dut/fetch/PCD" type="array">
-         <obj_property name="ElementShortName">PCD[31:0]</obj_property>
-         <obj_property name="ObjectShortName">PCD[31:0]</obj_property>
+      <wvobject fp_name="/Pipeline_top_tb/dut/fetch/PCF" type="array">
+         <obj_property name="ElementShortName">PCF[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PCF[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/fetch/PC_F" type="array">
+         <obj_property name="ElementShortName">PC_F[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PC_F[31:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/Pipeline_top_tb/dut/fetch/InstrD" type="array">
          <obj_property name="ElementShortName">InstrD[31:0]</obj_property>
@@ -158,6 +162,7 @@
    <wvobject fp_name="group45" type="group">
       <obj_property name="label">Hazard</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/Pipeline_top_tb/dut/Forwarding_Block/RegWriteM" type="logic">
          <obj_property name="ElementShortName">RegWriteM</obj_property>
          <obj_property name="ObjectShortName">RegWriteM</obj_property>
@@ -231,6 +236,14 @@
       <wvobject fp_name="/Pipeline_top_tb/dut/decode/ResultW" type="array">
          <obj_property name="ElementShortName">ResultW[31:0]</obj_property>
          <obj_property name="ObjectShortName">ResultW[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/decode/reg_file/A3" type="array">
+         <obj_property name="ElementShortName">A3[4:0]</obj_property>
+         <obj_property name="ObjectShortName">A3[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/decode/reg_file/WD3" type="array">
+         <obj_property name="ElementShortName">WD3[31:0]</obj_property>
+         <obj_property name="ObjectShortName">WD3[31:0]</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

@@ -1,0 +1,8 @@
+Time resolution is 1 ps
+x18 = fafafafa
+x19 = 00000009
+x20 = 00000003
+x21 = 00000002
+x23 = ffffffff
+mem[25]= f1e2d3c4
+$finish called at time : 210 ns : File "E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sim_1/new/Pipeline_top_tb.v" Line 11

@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat Aug 15 17:28:24 2026
+# Process ID         : 4012
+# Current directory  : E:/Electronics/Verilog Projects/RISC-V Pipelined Core
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent19868 E:\Electronics\Verilog Projects\RISC-V Pipelined Core\RISC-V Pipelined Core.xpr
+# Log file           : E:/Electronics/Verilog Projects/RISC-V Pipelined Core/vivado.log
+# Journal file       : E:/Electronics/Verilog Projects/RISC-V Pipelined Core\vivado.jou
+# Running On         : HP-VICTUS
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 5 7535HS with Radeon Graphics        
+# CPU Frequency      : 3294 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 16329 MB
+# Swap memory        : 17179 MB
+# Total Virtual      : 33509 MB
+# Available Virtual  : 15226 MB
+#-----------------------------------------------------------
+start_gui
+open_project {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.xpr}
+upgrade_project -migrate_output_products
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1

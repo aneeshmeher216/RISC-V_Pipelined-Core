@@ -5,6 +5,10 @@ module Hazard_Unit(
     output [1:0] ForwardAE, ForwardBE
 );
 
+//RegWriteM -> Regwrite signal of that instruction that is in memory stage now
+//RdM -> Destination register of that instruction that is in memory statge now
+//Rs1E -> 1st source register of that instruction that is in Execute stage now
+
 assign ForwardAE = (rst == 1'b0) ? 2'b00 :
                    ((RegWriteM == 1'b1) && (RdM != 5'd0) && (RdM == Rs1E)) ? 2'b10 :
                    ((RegWriteW == 1'b1) && (RdW != 5'd0) && (RdW == Rs1E)) ? 2'b01 : 2'b00;
