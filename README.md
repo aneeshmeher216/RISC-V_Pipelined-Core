@@ -76,6 +76,9 @@ Decode Stage     : Register read occurs in second half of cycle
 
 Therefore, Decode and Write Back stages effectively have only half a clock cycle available for their critical path.
 
+### Pipeline clock period as governed by critical path delay
+<img width="536" height="135" alt="image" src="https://github.com/user-attachments/assets/3fa3de0b-4fad-48e8-82f5-6c59b9ee80cc" />
+
 For this design, the critical path typically occurs in the **Execute Stage** when a branch instruction requires forwarded data from a later pipeline stage.
 
 The path is:
