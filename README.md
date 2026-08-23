@@ -147,6 +147,7 @@ Thus, The pipelined processor is substantially faster than the others.
 
 ## 📊 Performance Results
 * Latency : 5 clock cycles due to 5 pipelined stages
-* CPI : 1.67 (10 Clock Cycles for 6 instructions for non Hazard instructions)
-* Clock period will reduce as compared to single cycle processor design and determined by the stage having largest delay.
+* CPI : 1.67 (10 Clock Cycles for 6 instructions)
+* Max Achieved Freq. : 187.512 MHz
+* Setup WNS = 0.105ns & WHS = 0.088ns 
 * Throughput : 1 instruction per cycle after 4 cycles. Throughput will increase compared to single cycle core design as clock period will **ideally** reduce by upto 5 times but is nowhere near the fivefold speedup one might hope to get from a five-stage pipeline because of the CPI penalty introduced due to Data and control hazards (Structural hazard not present due to the use of separate memory for instruction and data) . Also the sequencing overhead (clk-to-Q and setup times) of the registers applies to every pipeline stage, not just once to the overall datapath.
