@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.runs/synth_1/Pipeline_top.tcl"
+  variable script "E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.runs/synth_1/Pipeline_top.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,41 +56,47 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param checkpoint.writeSynthRtdsInDcp 1
 set_param general.usePosixSpawnForFork 1
+set_param chipscope.maxJobs 3
+set_param dlyest.enablePhysicalLayerCollector 0
+set_param synth.incrementalSynthesisCache C:/Users/Hp/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-2476-HP-VICTUS/incrSyn
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a200tffg1156-2
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.cache/wt} [current_project]
-set_property parent.project_path {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.xpr} [current_project]
+set_property webtalk.parent_dir {E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.cache/wt} [current_project]
+set_property parent.project_path {E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo {e:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.cache/ip} [current_project]
+set_property ip_output_repo {e:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/ALU.v}
-  {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/ALU_Decoder.v}
-  {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/Control_Unit_Top.v}
-  {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/Data_Memory.v}
-  {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/Decode_Cycle.v}
-  {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/Execute_Cycle.v}
-  {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/Fetch_Cycle.v}
-  {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/Hazard_Unit.v}
-  {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/Instruction_Memory.v}
-  {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/Memory_Cycle.v}
-  {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/Mux_3X1.v}
-  {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/PC_adder.v}
-  {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/Program_Counter.v}
-  {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/Register_File.v}
-  {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/Sign_Extend.v}
-  {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/WriteBack_Cycle.v}
-  {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/main_decoder.v}
-  {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/mux_2X1.v}
-  {E:/Electronics/Verilog Projects/RISC-V Pipelined Core/RISC-V Pipelined Core.srcs/sources_1/new/Pipeline_top.v}
+  {E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.srcs/sources_1/new/ALU.v}
+  {E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.srcs/sources_1/new/ALU_Decoder.v}
+  {E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.srcs/sources_1/new/Control_Unit_Top.v}
+  {E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.srcs/sources_1/new/Data_Memory.v}
+  {E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.srcs/sources_1/new/Decode_Cycle.v}
+  {E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.srcs/sources_1/new/Execute_Cycle.v}
+  {E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.srcs/sources_1/new/Fetch_Cycle.v}
+  {E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.srcs/sources_1/new/Hazard_Unit.v}
+  {E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.srcs/sources_1/new/Instruction_Memory.v}
+  {E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.srcs/sources_1/new/Memory_Cycle.v}
+  {E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.srcs/sources_1/new/Mux_3X1.v}
+  {E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.srcs/sources_1/new/PC_adder.v}
+  {E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.srcs/sources_1/new/Program_Counter.v}
+  {E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.srcs/sources_1/new/Register_File.v}
+  {E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.srcs/sources_1/new/Sign_Extend.v}
+  {E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.srcs/sources_1/new/WriteBack_Cycle.v}
+  {E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.srcs/sources_1/new/main_decoder.v}
+  {E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.srcs/sources_1/new/mux_2X1.v}
+  {E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.srcs/sources_1/new/Pipeline_top.v}
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -101,6 +107,9 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc {{E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.srcs/constrs_1/new/const.xdc}}
+set_property used_in_implementation false [get_files {{E:/Electronics/Verilog Projects/RISC-V_Pipelined_Core/RISC-V Pipelined Core.srcs/constrs_1/new/const.xdc}}]
+
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

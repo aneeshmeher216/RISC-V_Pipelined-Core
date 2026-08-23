@@ -1,13 +1,18 @@
 module Pipeline_top(
-    input clk, rst
+    input clk, rst,
+    output [31:0] ALUResultW,
+    output RegWriteW,
+    output [31:0] PCPlus4W,
+    output [31:0] ReadDataW,
+    output [31:0] ResultW
 );
 
-wire PCSrcE, RegWriteW, RegWriteE, MemWriteE, ALUSrcE, ResultSrcE, BranchE;
+wire PCSrcE, RegWriteE, MemWriteE, ALUSrcE, ResultSrcE, BranchE; //, RegWriteW
 wire RegWriteM, MemWriteM, ResultSrcM;
 wire ResultSrcW;
-wire [31:0] PCtargetE, InstrD, PCD, PCPlus4D, ResultW, RD1E, RD2E, ImmExtE, PCE, PCPlus4E;
+wire [31:0] PCtargetE, InstrD, PCD, PCPlus4D, RD1E, RD2E, ImmExtE, PCE, PCPlus4E; //, ResultW
 wire [31:0] ALUResultM, WriteDataM, PCPlus4M;
-wire [31:0] ReadDataW, ALUResultW, PCPlus4W;
+//wire [31:0] ReadDataW, ALUResultW, PCPlus4W;
 wire [4:0] RDW, RD_E, RD_M;
 wire [2:0] ALUControlE;
 wire [4:0] Rs1_E, Rs2_E;

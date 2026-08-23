@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.017 ns"></ZoomStartTime>
-      <ZoomEndTime time="131.318 ns"></ZoomEndTime>
-      <Cursor1Time time="55.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="53.401 ns"></ZoomEndTime>
+      <Cursor1Time time="210.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="139"></NameColumnWidth>
-      <ValueColumnWidth column_width="81"></ValueColumnWidth>
+      <NameColumnWidth column_width="198"></NameColumnWidth>
+      <ValueColumnWidth column_width="96"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="8" />
    <wvobject fp_name="/Pipeline_top_tb/clk" type="logic">
@@ -195,6 +195,14 @@
          <obj_property name="ElementShortName">RdW[4:0]</obj_property>
          <obj_property name="ObjectShortName">RdW[4:0]</obj_property>
       </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/Forwarding_Block/ForwardAE" type="array">
+         <obj_property name="ElementShortName">ForwardAE[1:0]</obj_property>
+         <obj_property name="ObjectShortName">ForwardAE[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/Forwarding_Block/ForwardBE" type="array">
+         <obj_property name="ElementShortName">ForwardBE[1:0]</obj_property>
+         <obj_property name="ObjectShortName">ForwardBE[1:0]</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject fp_name="group38" type="group">
       <obj_property name="label">Memory</obj_property>
@@ -211,6 +219,14 @@
       <wvobject fp_name="/Pipeline_top_tb/dut/memory/ALUResultW" type="array">
          <obj_property name="ElementShortName">ALUResultW[31:0]</obj_property>
          <obj_property name="ObjectShortName">ALUResultW[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/memory/ReadDataM" type="array">
+         <obj_property name="ElementShortName">ReadDataM[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ReadDataM[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pipeline_top_tb/dut/memory/ReadDataM_r" type="array">
+         <obj_property name="ElementShortName">ReadDataM_r[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ReadDataM_r[31:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/Pipeline_top_tb/dut/memory/ReadDataW" type="array">
          <obj_property name="ElementShortName">ReadDataW[31:0]</obj_property>
@@ -236,14 +252,6 @@
       <wvobject fp_name="/Pipeline_top_tb/dut/decode/ResultW" type="array">
          <obj_property name="ElementShortName">ResultW[31:0]</obj_property>
          <obj_property name="ObjectShortName">ResultW[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Pipeline_top_tb/dut/decode/reg_file/A3" type="array">
-         <obj_property name="ElementShortName">A3[4:0]</obj_property>
-         <obj_property name="ObjectShortName">A3[4:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/Pipeline_top_tb/dut/decode/reg_file/WD3" type="array">
-         <obj_property name="ElementShortName">WD3[31:0]</obj_property>
-         <obj_property name="ObjectShortName">WD3[31:0]</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

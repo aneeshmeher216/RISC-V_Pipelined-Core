@@ -10,14 +10,25 @@ module Instr_Mem(
  reg [31:0] mem[0:1023];
  
  assign RD = (rst == 1'b0) ? 32'h00000000 : mem[A[31:2]];   //word_addressable
- 
- initial begin
+
+/* 
+initial begin
     mem[0] = 32'h02842903; //lw x18 40(x8)      
     mem[1] = 32'h01AC89B3; //add x19 x25 x26    
     mem[2] = 32'h41830A33; //sub x20 x6 x24     
     mem[3] = 32'h005DFAB3; //and x21 x27 x5     
     mem[4] = 32'h016EAA23; //sw x22 20(x29)     
     mem[5] = 32'h01C3EBB3; //or x23 x7 x28      
+end
+*/
+
+initial begin
+    mem[0] = 32'h00500293; //addi x5 x0 5      
+    mem[1] = 32'h00300313; //addi x6 x0 3    
+    mem[2] = 32'h006283B3; //add x7 x5 x6     
+    mem[3] = 32'h00002403; //lw x8 0(x0)     
+    mem[4] = 32'h00100493; //addi x9 x0 1     
+    mem[5] = 32'h00940533; //add x10 x8 x9      
 end
  
 endmodule

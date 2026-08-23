@@ -21,6 +21,12 @@ always @(posedge clk) begin
 end
 
 initial begin
+    reg_mem[0] = 32'd0;
+end
+
+
+/*
+initial begin
     reg_mem[5] = 32'h00000006;
     reg_mem[6] = 32'h0000000A;  
     reg_mem[8] = 32'h00000015;
@@ -40,5 +46,5 @@ initial begin
         $display("x21 = %h", reg_mem[21]);
         $display("x23 = %h", reg_mem[23]);
 end
-
+*/
 endmodule
